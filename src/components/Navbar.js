@@ -3,10 +3,12 @@ import { Link } from 'react-router-dom';
 import styled from 'styled-components';
 
 const NavbarContainer = styled.nav`
-  background-color: #f2f2f2;
+  background-color: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(5px);
   padding: 10px;
   display: flex;
-  justify-content: end;
+  justify-content: space-between; /* Updated to distribute space between logo and links */
+  align-items: center; /* Added to vertically align logo and links */
 `;
 
 const NavLinks = styled.ul`
@@ -21,24 +23,32 @@ const NavLink = styled.li`
 
   a {
     text-decoration: none;
-    color: #333;
+    color: #fff;
     padding: 5px;
 
     &:hover {
-      background-color: #ddd;
+      text-shadow: 0 0 10px #fff;
     }
   }
+`;
+
+const Logo = styled.div`
+  color: #fff;
+  font-size: 20px;
+  font-weight: bold;
+  padding: 10px;
 `;
 
 const Navbar = () => {
   return (
     <NavbarContainer>
+      <Logo>Travelopia</Logo>
       <NavLinks>
         <NavLink>
-          <Link to="/">Home</Link>
+          <Link to="/">HOME</Link>
         </NavLink>
         <NavLink>
-          <Link to="/trips">Trips</Link>
+          <Link to="/trips">TRIPS</Link>
         </NavLink>
       </NavLinks>
     </NavbarContainer>

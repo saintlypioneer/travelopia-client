@@ -1,0 +1,17 @@
+[
+    {
+      "name": "Test Name",
+      "email": "test@test.com",
+      "country": "india",
+      "travellerCount": 2,
+      "budget": 1000
+    },
+    {
+      "name": "Another Test",
+      "email": "another@test.com",
+      "country": "africa",
+      "travellerCount": 3,
+      "budget": 1500
+    }
+  ]
+  

@@ -30,7 +30,7 @@ function List() {
             <th>Country</th>
             <th>Travellers Count</th>
             <th>Budget</th>
-            <th>Total</th>
+            <th>Total $(usd)</th>
           </tr>
         </thead>
         <tbody>
@@ -41,7 +41,7 @@ function List() {
               <td>{trip.country}</td>
               <td>{trip.travellerCount}</td>
               <td>{trip.budget}</td>
-              <td>{trip.travellerCount * trip.budget} $(usd)</td>
+              <td>{trip.travellerCount * trip.budget}</td>
             </tr>
           ))}
         </tbody>
@@ -55,6 +55,12 @@ const Container = styled.div`
   flex-direction: column;
   align-items: center;
   padding: 20px;
+
+  h1{
+    color: #fff;
+    font-size: 4rem;
+  }
+
 `;
 
 const StyledTable = styled.table`
@@ -72,6 +78,12 @@ const StyledTable = styled.table`
 
   tbody tr:nth-child(even) {
     background-color: #f9f9f9;
+  }
+
+  tbody tr{
+    background-color: rgba(230, 247, 255, 0.5);
+    transition: all 0.2s ease-in-out;
+    font-weight: 600;
   }
 
   tbody tr:hover {

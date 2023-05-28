@@ -101,8 +101,13 @@ const Container = styled.div`
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  height: 100vh;
-  background-color: #f5f5f5;
+  height: 90vh;
+
+  h1{
+    color: #fff;
+    font-size: 2.5em;
+  }
+
 `;
 
 const StyledForm = styled.form`
@@ -114,6 +119,9 @@ const StyledForm = styled.form`
   background: #ffffff;
   box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.2);
   border-radius: 10px;
+  background-color: rgba(255, 255, 255, 0.5);
+  backdrop-filter: blur(5px);
+
   @media (min-width: 768px) {
     width: 50%;
   }
